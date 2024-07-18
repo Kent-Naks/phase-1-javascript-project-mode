@@ -1,27 +1,27 @@
 // msp.js
 fetch ('msp.json')
 const data = [
-    {"name": "Wil'liam A'yim", "age": 30, "gender": "male"}, //Palindrom feature used here.
-    {"name": "Melchior Balthazar", "age": 25, "gender": "male"},
-    {"name": "Peter Rono", "age": 35, "gender": "male"},
-    {"name": "Quincy Mwa'ngi", "age": 40, "gender": "male"},
-    {"name": "Jon-athan Mu-tinda", "age": 35, "gender": "male"},
-    {"name": "Kenedy Musyoki", "age": 25, "gender": "male"},
-    {"name": "Rickfalton Odhiambo", "age": 30, "gender": "male"},
-    {"name": "Stephen Chiuri", "age": 25, "gender": "female"},
-    {"name": "Ann-glorious (Mueni)", "age": 35, "gender": "female"},
-    {"name": "Anthonia Akaro", "age": 40, "gender": "female"},
-    {"name": "BRENDAN G'wer", "age": 35, "gender": "male"},
-    {"name": "Collins Isavwa", "age": 30, "gender": "male"},
-    {"name": "Degrace Benga", "age": 16, "gender": "female"},
-    {"name": "Desmond Maina", "age": 24, "gender": "male"},
-    {"name": "Erick KATANA", "age": 27, "gender": "male"},
-    {"name": "Farida Mutai", "age": 20, "gender": "female"},
-    {"name": "George Otieno1", "age": 31, "gender": "male"},
-    {"name": "HESBON LIMO", "age": 37, "gender": "male"},
-    {"name": "Ian Cheruiyot1", "age": 19, "gender": "male"},
-    {"name": "Kent Eugine", "age": 35, "gender": "male"},
-    {"name": "John Smith", "age": 24, "gender": "male"}
+    {"name": "Wil'liam A'yim", "age": 1994, "gender": "male"}, //Palindrom feature used here.
+    {"name": "Melchior Balthazar", "age": 1993, "gender": "male"},
+    {"name": "Peter Rono", "age": 1997, "gender": "male"},
+    {"name": "Quincy Mwa'ngi", "age": 1997, "gender": "male"},
+    {"name": "Jon-athan Mu-tinda", "age": 1996, "gender": "male"},
+    {"name": "Kenedy Musyoki", "age": 1995, "gender": "male"},
+    {"name": "Rickfalton Odhiambo", "age": 1998, "gender": "male"},
+    {"name": "Stephen Chiuri", "age": 1997, "gender": "female"},
+    {"name": "Ann-glorious (Mueni)", "age": 1999, "gender": "female"},
+    {"name": "Anthonia Akaro", "age": 1998, "gender": "female"},
+    {"name": "BRENDAN G'wer", "age": 1996, "gender": "male"},
+    {"name": "Collins Isavwa", "age": 1997, "gender": "male"},
+    {"name": "Degrace Benga", "age": 2000, "gender": "female"},
+    {"name": "Desmond Maina", "age": 1996, "gender": "male"},
+    {"name": "Erick KATANA", "age": 1997, "gender": "male"},
+    {"name": "Farida Mutai", "age": 1996, "gender": "female"},
+    {"name": "George Otieno1", "age": 1995, "gender": "male"},
+    {"name": "HESBON LIMO", "age": 1997, "gender": "male"},
+    {"name": "Ian Cheruiyot1", "age": 1996, "gender": "male"},
+    {"name": "Kent Eugine", "age": 1993, "gender": "male"},
+    {"name": "John Snow", "age": 1111, "gender": "male"}
 ];
 
 //I've used aspects of polindrum to first recognise all non alphanumeric character then turn the letters into lower case.
@@ -35,7 +35,7 @@ const matchRecords = (newName, newAge, newGender) => {
         if (cleanedString(data[i].name) === cleanedString(newName) &&
             data[i].age === parseInt(newAge) &&
             data[i].gender === newGender) {
-            matches += `<p>Match found: ${data[i].name}, Age: ${data[i].age}, Gender: ${data[i].gender}</p>`;
+            matches += `<p>Match found: ${data[i].name}, year of birth: ${data[i].yearOfbirth}, Gender: ${data[i].gender}</p>`;
         }
     }
 
@@ -48,10 +48,33 @@ const matchRecords = (newName, newAge, newGender) => {
 
 document.getElementById('searchButton').addEventListener('click', () => {
     const name = document.getElementById('name').value;
-    const age = document.getElementById('age').value;
+    const age = document.getElementById('year of birth').value;
     const gender = document.getElementById('gender').value;
 
     matchRecords(name, age, gender);
 });
 
+
+
+document.getElementById('finderForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const yearOfBirth = document.getElementById('yearOfBirth').value;
+    const gender = document.getElementById('gender').value;
+    const finderName = document.getElementById('finderName').value;
+    const contact = document.getElementById('contact').value;
+
+    // Here you can handle the submitted data, e.g., send it to a server, log it, etc.
+    console.log({
+        name,
+        yearOfBirth,
+        gender,
+        finderName,
+        contact
+    });
+
+    // Reset the form
+    document.getElementById('finderForm').reset();
+});
 
