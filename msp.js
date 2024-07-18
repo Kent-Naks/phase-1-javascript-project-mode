@@ -1,4 +1,6 @@
 // msp.js
+/*ARRAY */
+/*This is a list of people with details such as their name, year of birth, gender, image URL, and information about who found them and their contact details. */
 let data = [
     {"name": "Wil'liam A'yim", "age": 1994, "gender": "male", "image": "https://media.licdn.com/dms/image/D4D03AQHVtcjdKhpQEQ/profile-displayphoto-shrink_200_200/0/1710531716079?e=2147483647&v=beta&t=_7xiOyawd8kBdhYosVRIq5Brp9d7xx05w6QPUIoyRiY", "finderName": "Bruce Wayne", "contact": "batman@gmail.com"},
     {"name": "Melchior Balthazar", "age": 1993, "gender": "male", "image": "images/melchior_balthazar.jpg", "finderName": "The Winchesters", "contact": "SamandDean@gmail.com"},
@@ -23,8 +25,14 @@ let data = [
     {"name": "John Snow", "age": 1111, "gender": "male", "image": "images/john_snow.jpg", "finderName": "Precious", "contact": "LordOfTheRings@gmail.com"}
 ];
 
+/*This function removes all non-alphanumeric characters from a string and converts it to lowercase.*/
+/* Using two palindram features */
+/*Non-alpha-numeric characters and lower case formations*/
 const cleanedString = s => s.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
 
+
+/*Matching Records Function*/
+/*This function searches through the data array to find entries that match the name, year of birth, and gender provided by the user. It then displays these matches on the webpage. */
 const matchRecords = (name, yearOfBirth, gender) => {
     const resultsDiv = document.getElementById('results');
     let matches = '';
@@ -50,6 +58,8 @@ const matchRecords = (name, yearOfBirth, gender) => {
     resultsDiv.innerHTML = matches;
 };
 
+/*Search Button Event Listener*/
+/*When the "Search" button is clicked, this code gets the values from the search form fields and calls the matchRecords function to find and display matching records. */
 document.getElementById('searchButton').addEventListener('click', () => {
     const name = document.getElementById('searchName').value;
     const yearOfBirth = document.getElementById('searchYearOfBirth').value;
@@ -58,6 +68,8 @@ document.getElementById('searchButton').addEventListener('click', () => {
     matchRecords(name, yearOfBirth, gender);
 });
 
+
+/*Add Person Form Event Listener */
 document.getElementById('addPersonForm').addEventListener('submit', function(event) {
     event.preventDefault();
 

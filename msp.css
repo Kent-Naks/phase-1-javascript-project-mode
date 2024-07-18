@@ -11,7 +11,7 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background: gray;
+    background: rgba(128, 128, 128, 0.371);
     box-shadow: 0 0 10px rgb(224, 1, 172);
     margin-top: 70px;
 }
