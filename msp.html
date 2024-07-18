@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Missing Persons Match</title>
     <link rel="stylesheet" href="msp.css">
-
-
     <style>
-    /* New styles for the input container */
+        /* New styles for the input container */
         .input-container {
             width: 100%;
             padding: 20px;
@@ -39,39 +37,38 @@
         }
     </style>
 </head>
-
 <body>
-
     <div class="container">
         <h1>Missing Persons Search Form</h1>
         <form id="searchForm">
             <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" autocomplete="name">
+                <label for="searchName">Name:</label>
+                <input type="text" id="searchName" name="searchName" autocomplete="name">
             </div>
             <div>
-                <label for="yearOfBirth">Age:</label>
-                <input type="number" id="yearOfBirth" name="yearOfBirth" autocomplete="bday-year">
+                <label for="searchYearOfBirth">Year of Birth:</label>
+                <input type="number" id="searchYearOfBirth" name="searchYearOfBirth" autocomplete="bday-year">
             </div>
             <div>
-                <label for="gender">Gender:</label>
-                <select id="gender" name="gender" autocomplete="sex">
+                <label for="searchGender">Gender:</label>
+                <select id="searchGender" name="searchGender" autocomplete="sex">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
-                    
                 </select>
             </div>
             <button type="button" id="searchButton">Search</button>
         </form>
         <div id="results"></div>
     </div>
-
+    <br>
+    <br>
+    <br>
     <div class="input-container">
-        <form id="finderForm">
+        <form id="addPersonForm">
             <label for="name">Name of the person found:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="yearOfBirth">Year of birth:</label>
+            <label for="yearOfBirth">Year of Birth:</label>
             <input type="number" id="yearOfBirth" name="yearOfBirth" required>
 
             <label for="gender">Gender:</label>
@@ -90,9 +87,8 @@
             <input type="submit" value="Submit">
         </form>
     </div>
-
-
     <script src="msp.js"></script>
 </body>
 </html>
+
 

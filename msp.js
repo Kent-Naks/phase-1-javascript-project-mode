@@ -1,7 +1,6 @@
 // msp.js
-fetch ('msp.json')
-const data = [
-    {"name": "Wil'liam A'yim", "age": 1994, "gender": "male"}, //Palindrom feature used here.
+let data = [
+    {"name": "Wil'liam A'yim", "age": 1994, "gender": "male"},
     {"name": "Melchior Balthazar", "age": 1993, "gender": "male"},
     {"name": "Peter Rono", "age": 1997, "gender": "male"},
     {"name": "Quincy Mwa'ngi", "age": 1997, "gender": "male"},
@@ -24,48 +23,51 @@ const data = [
     {"name": "John Snow", "age": 1111, "gender": "male"}
 ];
 
-//I've used aspects of polindrum to first recognise all non alphanumeric character then turn the letters into lower case.
 const cleanedString = s => s.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
 
-const matchRecords = (newName, newAge, newGender) => {
+const matchRecords = (name, yearOfBirth, gender) => {
     const resultsDiv = document.getElementById('results');
     let matches = '';
 
     for (let i = 0; i < data.length; i++) {
-        if (cleanedString(data[i].name) === cleanedString(newName) &&
-            data[i].age === parseInt(newAge) &&
-            data[i].gender === newGender) {
-            matches += `<p>Match found: ${data[i].name}, year of birth: ${data[i].yearOfbirth}, Gender: ${data[i].gender}</p>`;
+        if (cleanedString(data[i].name) === cleanedString(name) &&
+            data[i].age === parseInt(yearOfBirth) &&
+            data[i].gender === gender) {
+            matches += `<p>Match found: ${data[i].name}, Year of Birth: ${data[i].age}, Gender: ${data[i].gender}</p>`;
         }
     }
 
     if (matches === '') {
-        matches = '<p>No matches found.</p>';''
+        matches = '<p>No matches found.</p>';
     }
 
     resultsDiv.innerHTML = matches;
 };
 
 document.getElementById('searchButton').addEventListener('click', () => {
-    const name = document.getElementById('name').value;
-    const age = document.getElementById('year of birth').value;
-    const gender = document.getElementById('gender').value;
+    const name = document.getElementById('searchName').value;
+    const yearOfBirth = document.getElementById('searchYearOfBirth').value;
+    const gender = document.getElementById('searchGender').value;
 
-    matchRecords(name, age, gender);
+    matchRecords(name, yearOfBirth, gender);
 });
 
-
-
-document.getElementById('finderForm').addEventListener('submit', function(event) {
+document.getElementById('addPersonForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    
+
     const name = document.getElementById('name').value;
     const yearOfBirth = document.getElementById('yearOfBirth').value;
     const gender = document.getElementById('gender').value;
     const finderName = document.getElementById('finderName').value;
     const contact = document.getElementById('contact').value;
 
-    // Here you can handle the submitted data, e.g., send it to a server, log it, etc.
+    // Add the new person to the data array
+    data.push({
+        name: name,
+        age: parseInt(yearOfBirth),
+        gender: gender
+    });
+
     console.log({
         name,
         yearOfBirth,
@@ -74,7 +76,9 @@ document.getElementById('finderForm').addEventListener('submit', function(event)
         contact
     });
 
+    alert('Person added successfully!');
+
     // Reset the form
-    document.getElementById('finderForm').reset();
+    document.getElementById('addPersonForm').reset();
 });
 
