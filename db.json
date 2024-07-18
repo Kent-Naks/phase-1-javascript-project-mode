@@ -1,0 +1,24 @@
+
+[
+    {"name": "Wil'liam A'yim", "age": 30, "gender": "male"}, 
+    {"name": "Melchior Balthazar", "age": 25, "gender": "female"},
+    {"name": "Peter Rono", "age": 35, "gender": "female"},
+    {"name": "Quincy Mwa'ngi", "age": 40, "gender": "male"},
+    {"name": "Jon-athan Mu-tinda", "age": 35, "gender": "female"},
+    {"name": "Kenedy Musyoki", "age": 25, "gender": "male"},
+    {"name": "Rickfalton Odhiambo", "age": 30, "gender": "male"},
+    {"name": "Stephen Chiuri", "age": 25, "gender": "female"},
+    {"name": "Ann-glorious (Mueni)", "age": 35, "gender": "female"},
+    {"name": "Anthonia Akaro", "age": 40, "gender": "male"},
+    {"name": "BRENDAN G'wer", "age": 35, "gender": "female"},
+    {"name": "Collins Isavwa", "age": 30, "gender": "male"},
+    {"name": "Degrace Benga", "age": 16, "gender": "male"},
+    {"name": "Desmond Maina", "age": 24, "gender": "female"},
+    {"name": "Erick KATANA", "age": 27, "gender": "female"},
+    {"name": "Farida Mutai", "age": 20, "gender": "male"},
+    {"name": "George Otieno1", "age": 31, "gender": "female"},
+    {"name": "HESBON LIMO", "age": 37, "gender": "male"},
+    {"name": "Ian Cheruiyot1", "age": 19, "gender": "male"},
+    {"name": "Kent Eugine", "age": 29, "gender": "female"},
+    {"name": "John Smith", "age": 35, "gender": "female"}
+]
