@@ -7,8 +7,34 @@
     <link rel="stylesheet" href="msp.css">
 </head>
 <body>
+    
     <div class="container">
-        <h1>Missing Persons Match</h1>
+        <h1>Missing Persons ADD Form</h1>
+        <form id="searchForm">
+            <div>
+                <label for="name of Jane/Jone Doe">Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name">
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" autocomplete="bday-year">
+            </div>
+            <div>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" autocomplete="sex">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    
+                </select>
+            </div>
+            <button type="button" id="searchButton">Search</button>
+        </form>
+        <div id="results"></div>
+    </div>
+
+
+    <div class="container">
+        <h1>Missing Persons Searchform</h1>
         <form id="searchForm">
             <div>
                 <label for="name">Name:</label>
@@ -23,6 +49,7 @@
                 <select id="gender" name="gender" autocomplete="sex">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
+                    
                 </select>
             </div>
             <button type="button" id="searchButton">Search</button>

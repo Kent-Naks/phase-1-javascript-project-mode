@@ -2,26 +2,26 @@
 fetch ('msp.json')
 const data = [
     {"name": "Wil'liam A'yim", "age": 30, "gender": "male"}, //Palindrom feature used here.
-    {"name": "Melchior Balthazar", "age": 25, "gender": "female"},
-    {"name": "Peter Rono", "age": 35, "gender": "female"},
+    {"name": "Melchior Balthazar", "age": 25, "gender": "male"},
+    {"name": "Peter Rono", "age": 35, "gender": "male"},
     {"name": "Quincy Mwa'ngi", "age": 40, "gender": "male"},
-    {"name": "Jon-athan Mu-tinda", "age": 35, "gender": "female"},
+    {"name": "Jon-athan Mu-tinda", "age": 35, "gender": "male"},
     {"name": "Kenedy Musyoki", "age": 25, "gender": "male"},
     {"name": "Rickfalton Odhiambo", "age": 30, "gender": "male"},
     {"name": "Stephen Chiuri", "age": 25, "gender": "female"},
     {"name": "Ann-glorious (Mueni)", "age": 35, "gender": "female"},
-    {"name": "Anthonia Akaro", "age": 40, "gender": "male"},
-    {"name": "BRENDAN G'wer", "age": 35, "gender": "female"},
+    {"name": "Anthonia Akaro", "age": 40, "gender": "female"},
+    {"name": "BRENDAN G'wer", "age": 35, "gender": "male"},
     {"name": "Collins Isavwa", "age": 30, "gender": "male"},
-    {"name": "Degrace Benga", "age": 16, "gender": "male"},
-    {"name": "Desmond Maina", "age": 24, "gender": "female"},
-    {"name": "Erick KATANA", "age": 27, "gender": "female"},
-    {"name": "Farida Mutai", "age": 20, "gender": "male"},
-    {"name": "George Otieno1", "age": 31, "gender": "female"},
+    {"name": "Degrace Benga", "age": 16, "gender": "female"},
+    {"name": "Desmond Maina", "age": 24, "gender": "male"},
+    {"name": "Erick KATANA", "age": 27, "gender": "male"},
+    {"name": "Farida Mutai", "age": 20, "gender": "female"},
+    {"name": "George Otieno1", "age": 31, "gender": "male"},
     {"name": "HESBON LIMO", "age": 37, "gender": "male"},
     {"name": "Ian Cheruiyot1", "age": 19, "gender": "male"},
-    {"name": "Kent Eugine", "age": 29, "gender": "female"},
-    {"name": "John Smith", "age": 35, "gender": "female"}
+    {"name": "Kent Eugine", "age": 35, "gender": "male"},
+    {"name": "John Smith", "age": 24, "gender": "male"}
 ];
 
 //I've used aspects of polindrum to first recognise all non alphanumeric character then turn the letters into lower case.
