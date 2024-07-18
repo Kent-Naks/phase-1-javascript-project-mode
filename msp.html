@@ -4,7 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Missing Persons Match</title>
+    <title>Navigation Bar</title>
+
     <link rel="stylesheet" href="msp.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .login {
+            background-color: green;
+        }
+        .logout {
+            background-color: red;
+        }
+        .content {
+            padding: 16px;
+            margin-top: 50px;
+        }
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
     <style>
         /* New styles for the input container */
         .input-container {
@@ -36,8 +120,17 @@
             background-color: #45a049;
         }
     </style>
+
 </head>
 <body>
+    <div class="navbar">
+        <a href="#contacts">Contacts</a>
+        <a href="#about">About Us</a>
+        <a href="#career">Career</a>
+        <a href="#login" class="login">Login</a>
+        <a href="#logout" class="logout">Logout</a>
+    </div>
+
     <div class="container">
         <h1>Missing Persons Search Form</h1>
         <form id="searchForm">
@@ -60,10 +153,23 @@
         </form>
         <div id="results"></div>
     </div>
-    <br>
     <hr>
-    <br>
+    <div class="content">
+        <h1>Welcome to Our Service</h1>
+        <p>The question is where do you REALLY!!! Start when your loved one goes missing. Do you first go report it to your nearest police station? Do you then visit every other police station in your county? Which hospital do you start of with and which one do you end with? The when do you finial decide to visit the Morgue within your county?</p>
+        <p>Why go through all this? We as MSP believe there is a 95% chance that there is someone out there who knows of your loved ones whereabouts and current condition.</p>
+        <p>Through the SDG(Sustainable Development Goals) under the 2030 Global UN agenda, we seek to provide a tool for social justice. focusing on GOOD HEALTH AND WELL BEING with emphasis on mental health and peace of mind.  </p>
+        <img src="https://i.pinimg.com/originals/e3/f4/15/e3f4155e1751dde9126ce98792fe54a0.gif" alt="Where to start?">
+    </div>
     
+    
+    
+    <div class="content" id="about">
+        <h2>About Us</h2>
+        <p>We are here to reunite families with those they have lost and to reduce the burden of body identification for the police force and morgues. As well as to reduce the strain of resources on public and private hospitals over unclaimed people/bodies.</p>
+    </div>
+    
+
     <br>
     <hr>
     <br>
@@ -91,6 +197,24 @@
             <input type="submit" value="Submit">
         </form>
     </div>
+    <br>
+    <br>
+    <hr>
+    <div class="content" id="career">
+        <h2>Career</h2>
+        <p>Currently hiring for an entry-level full stack software engineer position.</p>
+    </div>
+
+    <div class="footer" id="contacts">
+        <h2>Contacts</h2>
+        <p>Email: Missingpersonskenya@gmail.com / MSP@gmail.com</p>
+        <p>Phone: 0726699291 / 0799999999</p>
+        <p>Location: Upperhill rd / Westlands High rd</p>
+    </div>
+    
+
+
+
     <script src="msp.js"></script>
 </body>
 </html>
